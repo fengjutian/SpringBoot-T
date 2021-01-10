@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import java.lang.reflect.Array;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +16,10 @@ public class HelloController {
 	
     @RequestMapping("/index")
     public String index(Model model){
-        model.addAttribute("name","hello freemarker");
+        model.addAttribute("name","fengjutian");
+        model.addAttribute("userName","qiqi");
+        String[] animals = {"cat", "dag", "fish"};
+        model.addAttribute("animals", animals );
         return "index";
     }
 
